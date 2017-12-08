@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" viewBox="" id="innercircles-logo" version="1.1" inkscape:version="0.91 r13725" sodipodi:docname="innercircles-logo-square.svg" width="440.67001342773" height="402.1845703125">
+  <defs id="defs" />
+  <sodipodi:namedview pagecolor="#ffffff" bordercolor="#666666" borderopacity="1" objecttolerance="10" gridtolerance="10" guidetolerance="10" inkscape:pageopacity="0" inkscape:pageshadow="2" inkscape:window-width="1983" inkscape:window-height="1128" id="namedview16" showgrid="false" fit-margin-top="0" fit-margin-left="0" fit-margin-right="0" fit-margin-bottom="0" inkscape:zoom="1" inkscape:cx="109.08135228896" inkscape:cy="89.430004331054" inkscape:window-x="65" inkscape:window-y="24" inkscape:window-maximized="1" inkscape:current-layer="innercircles-logo" showborder="false" />
+  <style id="styles" type="text/css"><![CDATA[
+            /* prompt-200 - latin */
+            @font-face {
+                font-family: 'Prompt';
+                font-style: normal;
+                font-weight: 200;
+                src: url('../fonts/prompt-v2-latin-200.eot'); /* IE9 Compat Modes */
+                src: local('Prompt ExtraLight'), local('Prompt-ExtraLight'),
+                    url('../fonts/prompt-v2-latin-200.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+                    url('../fonts/prompt-v2-latin-200.woff2') format('woff2'), /* Super Modern Browsers */
+                    url('../fonts/prompt-v2-latin-200.woff') format('woff'), /* Modern Browsers */
+                    url('../fonts/prompt-v2-latin-200.ttf') format('truetype'), /* Safari, Android, iOS */
+                    url('../fonts/prompt-v2-latin-200.svg#Prompt') format('svg'); /* Legacy iOS */
+            }
+
+            /* prompt-500 - latin */
+            @font-face {
+                font-family: 'Prompt';
+                font-style: normal;
+                font-weight: 500;
+                src: url('../fonts/prompt-v2-latin-500.eot'); /* IE9 Compat Modes */
+                src: local('Prompt Medium'), local('Prompt-Medium'),
+                    url('../fonts/prompt-v2-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+                    url('../fonts/prompt-v2-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
+                    url('../fonts/prompt-v2-latin-500.woff') format('woff'), /* Modern Browsers */
+                    url('../fonts/prompt-v2-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
+                    url('../fonts/prompt-v2-latin-500.svg#Prompt') format('svg'); /* Legacy iOS */
+            }
+
+            .logoname {
+                font-family: 'Prompt';
+                font-weight: 500;
+            }
+
+            .logotagline {
+                font-family: 'Prompt';
+                font-weight: 200;
+            }
+    ]]></style>
+  <metadata id="metadata">
+    <rdf:RDF>
+      <cc:Work rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+        <cc:license rdf:resource="http://creativecommons.org/licenses/by-nc/3.0/" />
+      </cc:Work>
+      <cc:License rdf:about="http://creativecommons.org/licenses/by-nc/3.0/">
+        <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:requires rdf:resource="http://creativecommons.org/ns#Notice" />
+        <cc:requires rdf:resource="http://creativecommons.org/ns#Attribution" />
+        <cc:prohibits rdf:resource="http://creativecommons.org/ns#CommercialUse" />
+        <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <g id="innercircles-logo-square" transform="translate(-162.69952087402,262.75457542972)" inkscape:export-xdpi="90" inkscape:export-ydpi="90">
+    <text id="brand" class="logoname" xml:space="preserve" style="font-weight:500;font-size:80px;font-family:'Prompt Medium', Prompt;fill:#069;fill-opacity:1"><tspan y="83.131836" x="157.89952" id="brandname">innercircles</tspan></text>
+    <text class="logotagline" id="tagline" xml:space="preserve" style="font-weight:200;font-size:41px;font-family:'Prompt ExtraLight', Prompt;fill:#060;fill-opacity:1" x="-10"><tspan y="130" x="160" id="slogan">building life together™</tspan></text>
+    <g transform="matrix(2.5,0,0,2.5,-220.0859147334,-1905.8994118555)" id="icon">
+      <circle id="feels" cx="237.69326782227" cy="711.25793457031" r="14" style="fill:none;stroke:#f90;stroke-width:8;stroke-opacity:1" />
+      <circle id="acts" cx="237.69326782227" cy="711.25793457031" r="32" style="fill:none;stroke:#060;stroke-width:8;stroke-opacity:1" />
+      <circle id="thinks" cx="237.69326782227" cy="711.25793457031" r="50" style="fill:none;stroke:#069;stroke-width:8;stroke-opacity:1" />
+    </g>
+  </g>
+</svg>
