@@ -1,0 +1,760 @@
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="height=device-height, initial-scale=1.0">
+    <title>open up innercircles - simple solutions still exist</title>
+    <style>
+      /* prompt-200 - latin */
+      @font-face {
+          font-family: 'Prompt ExtraLight';
+          font-style: normal;
+          font-weight: 200;
+          src: url('styleguide/fonts/prompt-v2-latin-200.eot'); /* IE9 Compat Modes */
+          src: local('Prompt ExtraLight'), local('Prompt-ExtraLight'),
+              url('styleguide/fonts/prompt-v2-latin-200.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+              url('styleguide/fonts/prompt-v2-latin-200.woff2') format('woff2'), /* Super Modern Browsers */
+              url('styleguide/fonts/prompt-v2-latin-200.woff') format('woff'), /* Modern Browsers */
+              url('styleguide/fonts/prompt-v2-latin-200.ttf') format('truetype'), /* Safari, Android, iOS */
+              url('styleguide/fonts/prompt-v2-latin-200.svg#Prompt') format('svg'); /* Legacy iOS */
+      }
+
+      /* prompt-500 - latin */
+      @font-face {
+          font-family: 'Prompt';
+          font-style: normal;
+          font-weight: 500;
+          src: url('styleguide/fonts/prompt-v2-latin-500.eot'); /* IE9 Compat Modes */
+          src: local('Prompt Medium'), local('Prompt-Medium'),
+              url('styleguide/fonts/prompt-v2-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+              url('styleguide/fonts/prompt-v2-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
+              url('styleguide/fonts/prompt-v2-latin-500.woff') format('woff'), /* Modern Browsers */
+              url('styleguide/fonts/prompt-v2-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
+              url('styleguide/fonts/prompt-v2-latin-500.svg#Prompt') format('svg'); /* Legacy iOS */
+      }
+
+      .txt-medium {
+          font-family: 'Prompt';
+          font-weight: 500;
+      }
+
+      .txt-light {
+          font-family: 'Prompt ExtraLight';
+          font-weight: 400;
+      }
+
+      svg {
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        max-height: 100%;;
+      }
+
+      svg text, svg ellipse, svg path {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select:none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -o-user-select:none;
+        user-select: none;
+      }
+
+      svg text::selection {
+        background: none;
+      }
+
+      #emblem-reward:hover {
+        cursor: pointer;
+      }
+
+      /* action state */
+
+      #lets-think, #lets-act, #lets-feel, #lets-play, #lets-flourish {
+        opacity: 0;
+      }
+
+      /* holosphere state */
+
+      #atmo-sphere, #eco-sphere, #centri-sphere, #pleasure-sphere {
+        opacity: 0;
+      }
+
+      /* mission state */
+
+      #come-together, #come-fullcircle, #grow-heart {
+        opacity: 0;
+      }
+
+      /* vision state */
+
+      #follow-heart, #DiamondS, #innercircles-center {
+        opacity: 0;
+      }
+
+      /* reward state  */
+
+      #emblem-left, #emblem-right, #reward-heart {
+        opacity: 0;
+      }
+
+      /* community state */
+
+      #announcing, #innercircles-community, #first-help {
+        opacity: 0;
+      }
+
+      /* help state */
+
+      #helping-angels {
+        opacity: 0;
+      }
+
+    </style>
+
+    <script src="scripts/anime.min.js"></script>
+
+    <audio id="bell-chime" src="sounds/small-chime.wav" preload="metadata" type="audio/wav"></audio>
+    <audio id="gong-chime" src="sounds/gong-chime.wav" preload="metadata" type="audio/wav"></audio>
+    <audio id="magic-sparkle" src="sounds/magic-sparkle.wav" preload="metadata" type="audio/wav"></audio>
+
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "@id": "#innercircles",
+        "url": "https://innercircles.community",
+        "name": "innercircles",
+        "email": "innercircles@engagingspaces.io"
+        "founder": {
+          "@type": "Person",
+          "@id": "#arnoldschrijver",
+          "givenName": "Arnold",
+          "familyName": "Schrijver",
+          "email": "founder@engagingspaces.io"
+        },
+        "logo": {
+          "@type": "ImageObject",
+          "contentUrl": "https://innercircles.community/styleguide/logos/innercircles-logo-square.svg",
+          "caption": "innercircles - building life together",
+          "keywords": "innercircles, logo",
+          "license": "http://creativecommons.org/licenses/by-nc-nd/4.0/",
+          "creator": {
+            "@id": "#arnoldschrijver"
+          }
+          "sourceOrganization": {
+            "@id": "#innercircles"
+          }
+        }      
+      }
+    </script>
+  </head>
+  <body onclick="revealMore()">
+   <div id="behold">
+      <svg id="presenting-innercircles" xmlns="http://www.w3.org/2000/svg" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 0 1508.737 1298.53">
+        <metadata id="metadata">
+          <rdf:RDF>
+            <cc:Work>
+              <dc:format>image/svg+xml</dc:format>
+              <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+              <dc:title>open up innercircles - simple solutions still exist</dc:title>
+              <cc:license rdf:resource="http://creativecommons.org/licenses/by-nc-nd/4.0/"/>
+              <dc:subject>Announcing innercircles community - Coming 2018</dc:subject>
+              <dc:description>An overview of the mission and vision of the innercircles community</dc:description>
+              <dc:creator rdf:href="https://www.linkedin.com/in/arnoldschrijver/"/>
+              <dc:language>en</dc:language>
+            </cc:Work>
+            <cc:License rdf:about="http://creativecommons.org/licenses/by-nc-nd/4.0/">
+              <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction" />
+              <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution" />
+              <cc:requires rdf:resource="http://creativecommons.org/ns#Notice" />
+              <cc:requires rdf:resource="http://creativecommons.org/ns#Attribution" />
+              <cc:prohibits rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+              <cc:prohibits rdf:resource="http://creativecommons.org/ns#CommercialUse" />
+            </cc:License>
+          </rdf:RDF>
+        </metadata>
+        <defs id="defs">
+          <marker orient="auto" id="DiamondS" overflow="visible" style="overflow:visible">
+            <path id="path5640" d="M0-1.414L-1.414 0 0 1.414 1.414 0 0-1.414z" style="fill:#c0c;fill-rule:evenodd;stroke:#c0c;stroke-width:0.2pt"/>
+          </marker>
+          <marker orient="auto" id="Arrow2Lend" overflow="visible" style="overflow:visible">
+            <path id="path5576" d="M-10.69-4.437L1.328-.017l-12.018 4.42c1.92-2.61 1.91-6.18 0-8.84z" style="fill-rule:evenodd;stroke:#069;stroke-width:0.6875;stroke-linejoin:round"/>
+          </marker>
+          <marker orient="auto" id="Arrow1Send" overflow="visible" style="overflow:visible">
+            <path id="path5570" d="M-1.2 0l-1 1 3.5-1-3.5-1 1 1z" style="fill-rule:evenodd;stroke:#069;stroke-width:0.2pt"/>
+          </marker>
+          <marker orient="auto" id="Arrow1Lend" overflow="visible" style="overflow:visible">
+            <path id="path5558" d="M-10 0l-4 4L0 0l-14-4 4 4z" style="fill-rule:evenodd;stroke:#069;stroke-width:0.8pt"/>
+          </marker>
+          <marker orient="auto" id="Arrow1Mend" overflow="visible" style="overflow:visible">
+            <path id="path5564" d="M-4 0l-2 2 7-2-7-2 2 2z" style="fill:#069;fill-rule:evenodd;stroke:#069;stroke-width:0.4pt"/>
+          </marker>
+        </defs>
+
+        <g id="life-canvas">
+
+          <!--Get some action-->
+
+          <g id="get-some-action" x="780" font-size="40" letter-spacing="0" word-spacing="0" style="font-size:40px;font-family:sans-serif;letter-spacing:0;word-spacing:0;fill:#999">
+            <g id="lets-think" style="line-height:125%">
+              <path d="M998.45 90.647V60.022l30.528 15.312-30.528 15.313z" id="path4348"/>
+            </g>
+            <g id="lets-act" style="line-height:125%">
+              <path d="M1037.94 90.647V60.022l30.527 15.312-30.528 15.313z" id="path4351"/>
+            </g>
+            <g id="lets-feel" style="line-height:125%">
+              <path d="M1077.427 90.647V60.022l30.528 15.312-30.528 15.313z" id="path4354"/>
+            </g>
+            <g id="lets-play" style="line-height:125%">
+              <path d="M1116.915 90.647V60.022l30.528 15.312-30.528 15.313z" id="path4357"/>
+            </g>
+            <g id="lets-flourish" style="line-height:125%">
+                <path d="M1156.403 90.647V60.022l30.528 15.312-30.527 15.313z" id="path4345"/>
+              </g>
+          </g>
+
+          <!--Come together-->
+
+          <g id="atmo-sphere" transform="translate(4)">
+            <g id="thinks">
+
+              <!--think-->
+              <text id="think-together" y="88.958" x="-121.419" class="txt-light" font-weight="400" font-size="41" style="font-weight:400;font-size:41px;font-family:'Prompt ExtraLight';fill:#069">
+                <tspan id="think-text" x="48.581" y="218.958">think</tspan>
+              </text>
+              <path id="think-connect" d="M149.684 206.085l181.6.452 275.872 193.8" style="fill:none;fill-rule:evenodd;stroke:#069;stroke-width:4"/>
+
+              <!--air-->
+              <text id="fullcircle-air" class="txt-light" x="1096.328" y="216.567" font-weight="400" font-size="41" style="font-weight:400;font-size:41px;font-family:'Prompt ExtraLight';fill:#069">
+                <tspan id="air-text" y="346.567" x="1266.328">air</tspan>
+              </text>
+              <path id="air-connect" d="M1012.286 404.464l118.654-68.71 127.596.698" style="fill:none;fill-rule:evenodd;stroke:#069;stroke-width:4"/>
+
+              <!--mind-->
+              <text id="grow-mind" y="902.567" x="1096.328" class="txt-light" font-weight="400" font-size="41" style="font-weight:400;font-size:41px;font-family:'Prompt ExtraLight';fill:#069">
+                <tspan id="mind-text" x="1266.328" y="1032.567">mind</tspan>
+              </text>
+              <path id="mind-connect" d="M980.72 915.93l151.714 103.9 127.596.698" style="fill:none;fill-rule:evenodd;stroke:#069;stroke-width:4"/>
+
+              <!--cooperate-->
+              <g id="innercircles-cooperative">
+                <text id="ic-brand" y="1038.515" x="114.057" class="txt-medium" font-weight="500" font-size="80" style="font-weight:500;font-size:64px;font-family:Prompt;fill:#069" transform="translate(-16 -34)">
+                  <tspan id="ic-brandname" y="1038.515" x="114.057">innercircles</tspan>
+                </text>
+                <text id="ic-tagline" class="txt-light" y="1074.872" x="116.036" font-weight="400" font-size="41" style="font-weight:400;font-size:32.7999992371px;font-family:'Prompt ExtraLight';fill:#060" transform="translate(-16 -34)">
+                  <tspan id="innercircles-slogan" y="1074.872" x="116.036">building life together™</tspan>
+                </text>
+                <g id="innercircles-logo" transform="matrix(.8 0 0 .8 -143.8 433.7)" style="fill:none;stroke-width:8">
+                  <circle id="thinks-1" cx="237.693" cy="711.258" r="50" style="stroke:#069"/>
+                  <circle id="acts-1" cx="237.693" cy="711.258" r="32" style="stroke:#060"/>
+                  <circle id="feels-1" cx="237.693" cy="711.258" r="14" style="stroke:#f90"/>
+                </g>
+              </g>
+              <path id="innercircles-connect" d="M463.884 1004.96l66.45.453 112.713-65.41" style="fill:none;fill-rule:evenodd;stroke:#069;stroke-width:4"/>
+
+              <!--involve-->
+              <path id="think-circles" style="fill:none;stroke:#069;stroke-width:52.1380004883" d="M1141.486 659.02a340.534 311.825 0 0 1-340.534 311.824A340.534 311.825 0 0 1 460.418 659.02a340.534 311.825 0 0 1 340.534-311.826 340.534 311.825 0 0 1 340.534 311.825z"/>
+            </g>
+
+            <!--mission 1-->
+            <text id="come-together" class="txt-light" x="-158.632" y="19.011" font-weight="400" font-size="41" style="font-weight:400;font-size:41px;font-family:'Prompt ExtraLight';fill:#069">
+              <tspan id="mission1-text" y="149.011" x="11.368">COME TOGETHER™</tspan>
+            </text>
+          </g>
+
+          <!--Come fullcircle-->
+
+          <g id="eco-sphere" transform="translate(4)">
+            <g id="acts">
+
+              <!--act-->
+              <text id="act-together" class="txt-light" x="-85.842" y="154.567" font-weight="400" font-size="41" style="font-weight:400;font-size:41px;font-family:'Prompt ExtraLight';fill:#060">
+                <tspan y="284.567" x="84.158" id="act-text">act</tspan>
+              </text>
+              <path id="act-connect" d="M146.575 274.287l181.6.453 332.193 231.73" style="fill:none;fill-rule:evenodd;stroke:#060;stroke-width:4"/>
+
+              <!--earth-->
+              <text id="fullcircle-earth" y="286.567" x="1096.328" class="txt-light" font-weight="400" font-size="41" style="font-weight:400;font-size:41px;font-family:'Prompt ExtraLight';fill:#060">
+                <tspan id="earth-text" x="1266.328" y="416.567">earth</tspan>
+              </text>
+              <path id="earth-connect" d="M951.463 507.613l178.74-102.058 127.597.697" style="fill:none;fill-rule:evenodd;stroke:#060;stroke-width:4"/>
+
+              <!--body-->
+              <text id="grow-body" class="txt-light" x="1096.328" y="830.567" font-weight="400" font-size="41" style="font-weight:400;font-size:41px;font-family:'Prompt ExtraLight';fill:#060">
+                <tspan y="960.567" x="1266.328" id="body-text">body</tspan>
+              </text>
+              <path id="body-connect" d="M934.707 815.027l198.84 133.785 127.597.697" style="fill:none;fill-rule:evenodd;stroke:#060;stroke-width:4"/>
+
+              <!--improve-->
+              <g id="fullcircle-ecosystem">
+                <g id="fullcircle-logo-icon-only">
+                  <g id="icon" transform="matrix(.3 0 0 .3 70.8 789.6)">
+                    <circle style="fill:#aecf00;fill-opacity:1;stroke:none;stroke-width:20;stroke-opacity:1" r="20" cy="287.245" cx="-86.853" id="soul"/>
+                    <circle style="fill:none;stroke:#060;stroke-width:20;stroke-opacity:1" r="80" cy="287.245" cx="-86.853" id="earth"/>
+                    <path style="fill:#f90" id="renewal" d="M13.72 145.51l-19.402 4.86 9.184 36.677c-23.943-21.615-55.634-34.8-90.356-34.8-74.44 0-135 60.56-135 135s60.56 135 135 135c68.177 0 124.702-50.802 133.733-116.536A20 20 0 0 0 57 288.35a20 20 0 0 0-20-20 20 20 0 0 0-20 20 20 20 0 0 0 9.703 17.115C18 360.4-29.427 402.245-86.854 402.245c-63.63 0-115-51.368-115-115 0-63.63 51.37-115 115-115 43.72 0 81.653 24.252 101.11 60.07l.51-.288.004.014 19.402-4.856L13.72 145.51z"/>
+                  </g>
+                </g>
+                <text id="fullcircle-brand" class="txt-medium" font-weight="500" font-size="86" x="303.2" y="535.2" style="font-weight:500;font-size:60.2000007629px;font-family:Prompt;fill:#060">
+                  <tspan id="brandname-4" y="883.892" x="101.6">fullcircle</tspan>
+                </text>
+                <text id="fullcircle-tagline" class="txt-light" font-weight="400" font-size="41" x="303.2" y="533.2" style="font-weight:400;font-size:28.7000007629px;font-family:'Prompt ExtraLight';fill:#ff900f;fill-opacity:0.9410000072">
+                  <tspan y="915.4" x="101.6" id="slogan-8">the game of life™</tspan>
+                </text>
+              </g>
+              <path id="fullcircle-connect" d="M349.386 878.61l75.02.452 190.346-106.2" style="fill:none;fill-rule:evenodd;stroke:#060;stroke-width:4"/>
+
+              <!--evolve-->
+              <path id="act-circles" style="fill:none;stroke:#060;stroke-width:52.1380004883" d="M1018.893 659.02a217.94 199.568 0 0 1-217.94 199.567A217.94 199.568 0 0 1 583.01 659.02a217.94 199.568 0 0 1 217.942-199.57 217.94 199.568 0 0 1 217.94 199.57z"/>
+            </g>
+
+            <!--mission 2-->
+            <text id="come-fullcircle" class="txt-light" x="929.933" y="149.761" font-weight="400" font-size="41" style="font-weight:400;font-size:41px;font-family:'Prompt ExtraLight';fill:#060">
+              <tspan id="mission2-text" y="279.761" x="1099.933">COME FULLCIRCLE™</tspan>
+            </text>
+          </g>
+
+          <!--Become whole-->
+          <g id="centri-sphere" transform="translate(4)">
+            <g id="feel">
+
+              <!--feel-->
+              <text id="feel-together" y="228.567" x="-104.198" class="txt-light" font-weight="400" font-size="44" style="font-weight:400;font-size:44px;font-family:'Prompt ExtraLight';fill:#f90">
+                <tspan id="feel-text" x="65.802" y="358.567">feel</tspan>
+              </text>
+              <path id="feel-connect" d="M147.357 347.505l181.6.453 377.02 259.317" style="fill:none;fill-rule:evenodd;stroke:#f90;stroke-width:4"/>
+
+              <!--ether-->
+              <text id="fullcircle-ether" class="txt-light" x="1096.328" y="360.567" font-weight="400" font-size="44" style="font-weight:400;font-size:44px;font-family:'Prompt ExtraLight';fill:#f90">
+                <tspan id="ether-text" y="490.567" x="1266.328">ether</tspan>
+              </text>
+              <path id="ether-connect" d="M889.817 616.04l240.628-138.688 127.596.697" style="fill:none;fill-rule:evenodd;stroke:#f90;stroke-width:4"/>
+
+              <!--soul-->
+              <text id="grow-soul" y="758.567" x="1096.328" class="txt-light" font-weight="400" font-size="44" style="font-weight:400;font-size:44px;font-family:'Prompt ExtraLight';fill:#f90">
+                <tspan id="soul-text" x="1266.328" y="888.567">soul</tspan>
+              </text>
+              <path id="soul-connect" d="M880.29 706.49l251.352 171.535 127.596.697" style="fill:none;fill-rule:evenodd;stroke:#f90;stroke-width:4"/>
+
+              <!--enligthen-->
+              <path id="feel-circles" style="fill:none;stroke:#f90;stroke-width:52.138" d="M896.3 659.02a95.35 87.31 0 0 1-95.348 87.31 95.35 87.31 0 0 1-95.35-87.31 95.35 87.31 0 0 1 95.35-87.312 95.35 87.31 0 0 1 95.35 87.31z"/>
+            </g>
+          </g>
+
+          <!--Grow-->
+
+          <g id="pleasure-sphere">
+            <g id="play" transform="translate(4)">
+
+              <!--play-->
+              <text y="540.64" x="-141.074" id="play-heart" class="txt-light" font-weight="400" font-size="41" style="font-weight:400;font-size:41px;font-family:'Prompt ExtraLight';fill:#c0c">
+                <tspan id="play-text" x="28.926" y="670.64">play</tspan>
+              </text>
+              <g style="font-size:46.3050003052px;line-height:125%;font-family:sans-serif;letter-spacing:0;word-spacing:0;fill:#c0c" id="heart">
+                <path d="M131.9 674.96q-3.097-5.405-12.526-10.877-4.386-2.555-4.386-6.58 0-1.695.61-3.255.634-1.56 1.877-2.78 1.198-1.177 2.76-1.855 1.468-.633 3.21-.633 1.74 0 3.21.633 1.537.656 2.758 1.854 1.2 1.176 1.832 2.736.655 1.537.655 3.3 0-1.763.633-3.3.656-1.56 1.854-2.736 1.22-1.198 2.76-1.854 1.468-.633 3.21-.633 1.74 0 3.21.633 1.56.678 2.758 1.854 1.244 1.22 1.854 2.78.632 1.56.632 3.257 0 4.07-4.386 6.58-9.428 5.47-12.526 10.875z" id="heart-path"/>
+              </g>
+              <path id="play-connect" d="M161.895 662.72l628.51-.253" style="fill:none;fill-rule:evenodd;stroke:#c0c;stroke-width:4.2899999619"/>
+
+              <!--tease, nudge, teach, coach-->
+              <g id="teaserbot-labs">
+                <g id="tb-teaserbot">
+                  <path d="M197.93 614.983h3.862v5.692h2.3v3.336h-2.3v12.11h-3.86v-12.11h-1.988v-3.335h1.987v-5.692z" id="path5728" style="fill:#069"/>
+                  <path d="M221.678 629.518H209.23q.27 1.646 1.433 2.626 1.178.965 2.995.965 2.172 0 3.733-1.52l3.267 1.532q-1.22 1.732-2.924 2.57-1.703.823-4.045.823-3.634 0-5.92-2.286-2.285-2.3-2.285-5.75 0-3.533 2.27-5.86 2.287-2.343 5.722-2.343 3.647 0 5.933 2.342 2.285 2.327 2.285 6.16l-.014.737zm-3.89-3.052q-.383-1.29-1.518-2.1-1.122-.81-2.612-.81-1.618 0-2.84.91-.765.567-1.418 2h8.39z" id="path5730" style="fill:#069"/>
+                  <path d="M236.24 620.675h3.86v15.443h-3.86v-1.632q-1.135 1.08-2.285 1.56-1.135.47-2.47.47-2.994 0-5.18-2.314-2.186-2.328-2.186-5.777 0-3.577 2.113-5.862 2.115-2.285 5.138-2.285 1.39 0 2.613.525 1.22.525 2.257 1.575v-1.703zm-4.073 3.18q-1.803 0-2.995 1.277-1.192 1.263-1.192 3.25 0 2.002 1.206 3.293 1.22 1.292 2.995 1.292 1.833 0 3.04-1.263 1.206-1.278 1.206-3.336 0-2.015-1.206-3.264-1.208-1.25-3.053-1.25z" id="path5732" style="fill:#069"/>
+                  <path d="M253.472 622.833l-2.4 2.398q-1.46-1.445-2.653-1.445-.655 0-1.024.284-.37.27-.37.68 0 .312.228.582.24.256 1.164.71l1.418.71q2.243 1.107 3.08 2.257.838 1.15.838 2.696 0 2.058-1.52 3.435-1.503 1.377-4.044 1.377-3.378 0-5.394-2.64l2.385-2.598q.68.794 1.59 1.29.923.483 1.633.483.766 0 1.235-.37.468-.368.468-.85 0-.895-1.69-1.746l-1.305-.653q-3.746-1.888-3.746-4.727 0-1.83 1.405-3.122 1.42-1.306 3.62-1.306 1.504 0 2.824.666 1.335.653 2.257 1.888z" id="path5734" style="fill:#069"/>
+                  <path d="M272.265 629.518h-12.448q.27 1.646 1.433 2.626 1.18.965 2.995.965 2.172 0 3.733-1.52l3.265 1.532q-1.22 1.732-2.924 2.57-1.705.823-4.047.823-3.634 0-5.92-2.286-2.284-2.3-2.284-5.75 0-3.533 2.27-5.86 2.285-2.343 5.72-2.343 3.65 0 5.933 2.342 2.285 2.327 2.285 6.16l-.015.737zm-3.89-3.052q-.382-1.29-1.518-2.1-1.12-.81-2.612-.81-1.618 0-2.838.91-.767.567-1.42 2h8.39z" id="path5736" style="fill:#069"/>
+                  <path d="M274.508 620.675h3.32v1.945q.54-1.15 1.435-1.746.894-.596 1.958-.596.755 0 1.578.397l-1.207 3.336q-.68-.34-1.12-.34-.894 0-1.52 1.108-.61 1.107-.61 4.344l.015.753v6.245h-3.846v-15.443z" id="path5738" style="fill:#069"/>
+                  <path d="M288.574 614.714v7.664q1.05-1.05 2.27-1.575 1.22-.525 2.612-.525 3.024 0 5.14 2.285 2.114 2.285 2.114 5.862 0 3.45-2.186 5.777-2.186 2.314-5.18 2.314-1.335 0-2.485-.47-1.15-.48-2.287-1.56v1.632h-3.847v-21.404h3.847zm4.073 9.14q-1.83 0-3.037 1.25-1.207 1.25-1.207 3.264 0 2.058 1.207 3.336 1.206 1.263 3.037 1.263 1.775 0 2.98-1.292 1.222-1.29 1.222-3.293 0-1.987-1.194-3.25-1.193-1.277-3.01-1.277z" id="path5740" style="fill:#c0c"/>
+                  <path d="M311.17 620.278q2.186 0 4.103 1.093 1.93 1.095 3.01 2.968 1.077 1.874 1.077 4.045 0 2.186-1.093 4.088-1.078 1.903-2.952 2.98-1.873 1.067-4.13 1.067-3.322 0-5.678-2.357-2.342-2.37-2.342-5.75 0-3.62 2.654-6.032 2.326-2.1 5.35-2.1zm.057 3.648q-1.802 0-3.01 1.263-1.19 1.247-1.19 3.206 0 2.015 1.177 3.264 1.192 1.25 3.01 1.25 1.816 0 3.022-1.263 1.207-1.263 1.207-3.25t-1.192-3.222q-1.177-1.25-3.022-1.25z" id="path5742" style="fill:#c0c"/>
+                  <path d="M323.008 614.983h3.86v5.692h2.3v3.336h-2.3v12.11h-3.86v-12.11h-1.987v-3.335h1.99v-5.692z" id="path5744" style="fill:#c0c"/>
+                </g>
+                <g id="tb-heart" style="fill:#c0c">
+                  <path d="M302.39 621.433q-.343-.913-.997-1.707-.643-.8-2.95-2.92-1.083-.996-1.5-1.587-.42-.594-.42-1.223 0-.824.795-1.385.793-.57 1.962-.57 2.21 0 3.11 1.88.365-.966 1.212-1.423.858-.465 1.845-.465 1.17 0 1.963.562.804.56.804 1.325 0 .63-.43 1.34-.428.712-1.865 1.977-3.048 2.695-3.53 4.192z" id="path5750"/>
+                </g>
+                <g id="tb-labs" style="fill:#069">
+                  <path d="M338.144 614.523h3.785v20.907h-3.787v-20.907z" id="path4566"/>
+                  <path d="M356.514 620.346h3.77v15.084h-3.77v-1.594q-1.11 1.053-2.232 1.525-1.11.46-2.413.46-2.927 0-5.06-2.26-2.137-2.274-2.137-5.643 0-3.494 2.066-5.726 2.064-2.23 5.017-2.23 1.36 0 2.55.512 1.194.514 2.206 1.54v-1.664zm-3.98 3.106q-1.76 0-2.924 1.247-1.165 1.232-1.165 3.173 0 1.955 1.178 3.217 1.193 1.262 2.926 1.262 1.786 0 2.965-1.234 1.178-1.247 1.178-3.258 0-1.968-1.178-3.188-1.18-1.22-2.98-1.22z" id="path4568"/>
+                  <path d="M367.868 614.523v7.487q1.026-1.026 2.218-1.54 1.193-.512 2.55-.512 2.954 0 5.02 2.232 2.066 2.232 2.066 5.726 0 3.37-2.135 5.642-2.135 2.26-5.06 2.26-1.304 0-2.427-.457-1.123-.47-2.232-1.523v1.594h-3.757v-20.906h3.76zm3.98 8.93q-1.79 0-2.968 1.22t-1.178 3.187q0 2.01 1.178 3.258 1.18 1.234 2.967 1.234 1.733 0 2.912-1.26 1.19-1.263 1.19-3.218 0-1.94-1.165-3.175-1.164-1.25-2.94-1.25z" id="path4570"/>
+                  <path d="M392.088 622.453l-2.343 2.343q-1.428-1.414-2.592-1.414-.638 0-.998.278-.36.263-.36.665 0 .305.22.568.237.25 1.138.694l1.386.693q2.19 1.08 3.007 2.204.818 1.123.818 2.634 0 2.01-1.484 3.355-1.47 1.345-3.95 1.345-3.3 0-5.27-2.578l2.33-2.538q.666.777 1.554 1.262.9.47 1.594.47.748 0 1.205-.36.458-.36.458-.83 0-.874-1.65-1.706l-1.275-.638q-3.66-1.844-3.66-4.617 0-1.788 1.373-3.05 1.386-1.275 3.535-1.275 1.47 0 2.76.652 1.302.637 2.203 1.843z" id="path4572"/>
+                </g>
+                <g id="mark-trade" style="line-height:300%;fill:#069">
+                    <path id="path4575" d="M413.298 615.476v6.402h-1.114v-5.273l-2.384 5.273h-.736l-2.31-5.273v5.273h-1.106v-6.402h1.805l1.983 4.434 2.094-4.434h1.768zm-8.883 0v1.018h-2.265v5.384h-1.114v-5.384h-2.25v-1.018h5.63z"/>
+                  </g>
+                <g id="mascotte" transform="matrix(.4 0 0 .4 165.7 458.3)">
+                  <path style="fill:#c0c;fill-opacity:1;stroke:none;stroke-width:9;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" id="lower-head" d="M418.88 122.075A122.396 177.275 0 0 1 357.682 275.6a122.396 177.275 0 0 1-122.396 0 122.396 177.275 0 0 1-61.198-153.525"/>
+                  <path style="fill:#c0c;fill-opacity:1;stroke:none;stroke-width:9;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" id="upper-head" d="M173.906 125.31a94.46 122.396 90 0 1 61.198-81.805 94.46 122.396 90 0 1 122.396 0 94.46 122.396 90 0 1 61.2 81.805"/>
+                  <ellipse style="fill:white;fill-opacity:1;stroke:none;stroke-width:9;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" id="left-eye" cx="248.316" cy="125.394" rx="26.704" ry="39.55"/>
+                  <ellipse style="fill:white;fill-opacity:1;stroke:none;stroke-width:9;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" id="right-eye" cx="340.011" cy="124.649" rx="27.638" ry="40.099"/>
+                  <ellipse style="fill:#c0c;fill-opacity:1;stroke:none;stroke-width:9;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" id="right-eyelid" cx="329.553" cy="158.186" rx="18.674" ry="24.06"/>
+                  <ellipse style="fill:#c0c;fill-opacity:1;stroke:none;stroke-width:9;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" id="left-eyelid" cx="259.454" cy="158.974" rx="19.635" ry="24.625"/>
+                  <path style="fill:#fef;fill-opacity:1;stroke:none;stroke-width:9;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" id="lower-mouth" d="M369.505 184.95a74.143 71.17 0 0 1-37.072 61.635 74.143 71.17 0 0 1-74.143 0 74.143 71.17 0 0 1-37.072-61.634"/>
+                  <path style="fill:#c0c;fill-opacity:1;stroke:none;stroke-width:9;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" id="upper-mouth" d="M386.988 183.187a91.627 43.747 0 0 1-45.813 37.886 91.627 43.747 0 0 1-91.627 0 91.627 43.747 0 0 1-45.813-37.886"/>
+                  <ellipse transform="matrix(1 -.2 .2 1 0 0)" ry="6.4" rx="4.5" cy="162.358" cx="225.985" id="left-pupil" style="fill:#069;fill-opacity:1;stroke:none;stroke-width:9;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/>
+                  <ellipse transform="matrix(1 .2 -.2 1 0 0)" ry="6.4" rx="4.5" cy="59.527" cx="350.156" id="right-pupil" style="fill:#069;fill-opacity:1;stroke:none;stroke-width:9;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/>
+                  <ellipse ry="5" rx="4.5" cy="176.899" cx="282.688" id="left-nose" style="fill:#fcf;fill-opacity:1;stroke:none;stroke-width:9;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/>
+                  <ellipse ry="5" rx="4.5" cy="176.899" cx="301.751" id="right-nose" style="fill:#fcf;fill-opacity:1;stroke:none;stroke-width:9;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/>
+                  <rect transform="rotate(-43.4)" ry="10" y="154.041" x="109.266" height="48" width="20" id="left-ear" style="fill:#f9f;fill-opacity:1;stroke:none;stroke-width:9;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/>
+                  <rect transform="matrix(-.7 -.7 -.7 .7 0 0)" ry="10" y="-254.987" x="-320.093" height="48" width="20" id="right-ear" style="fill:#f9f;fill-opacity:1;stroke:none;stroke-width:9;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/>
+                </g>
+
+                <!--mission 3-->
+                <text id="grow-heart" class="txt-light" x="1074.368" y="691.551" font-weight="400" font-size="41" style="font-weight:400;font-size:41px;font-family:'Prompt ExtraLight';fill:#c0c">
+                  <tspan y="821.551" x="1244.368" id="mission3-grow-heart">GROW™</tspan>
+                </text>
+              </g>
+
+              <!--fun, pleasure, delight, happiness-->
+              <ellipse id="innercircles-center" ry="28.883" rx="31.542" cx="801.042" cy="660.958" style="fill:#c0c;stroke-width:10"/>
+            </g>
+          </g>
+
+          <!--Vision-->
+
+          <g id="fruit-of-life" transform="translate(4)">
+            <text id="emblem-left" y="32.895" x="1153.368" class="txt-medium" font-weight="500" font-size="80" transform="translate(-705.2 -17.1)" style="font-weight:400;font-size:80px;font-family:'Prompt ExtraLight';fill:#f90">
+              <tspan id="become" x="1311.268" y="116.027">become</tspan>
+            </text>
+            <g id="emblem-reward">
+              <path id="reward-heart" d="M1005.945 95.98q-5.045-8.803-20.403-17.716-7.145-4.16-7.145-10.717 0-2.762.995-5.303 1.03-2.54 3.056-4.53 1.952-1.915 4.494-3.02 2.393-1.03 5.23-1.03 2.835 0 5.23 1.03 2.503 1.068 4.492 3.02 1.952 1.915 2.983 4.456 1.068 2.504 1.068 5.377 0-2.873 1.032-5.377 1.068-2.54 3.02-4.456 1.988-1.952 4.493-3.02 2.394-1.03 5.23-1.03 2.835 0 5.23 1.03 2.54 1.105 4.492 3.02 2.026 1.99 3.02 4.53 1.032 2.54 1.032 5.303 0 6.63-7.145 10.717-15.36 8.913-20.405 17.715z" style="fill:#f90"/>
+              <ellipse id="emblem-reward-circle" ry="48.239" rx="52.681" cx="1006.11" cy="72.642" style="fill:none;stroke:#999;stroke-width:28.806"/>
+            </g>
+            <text id="emblem-right" y="32.895" x="1147.368" class="txt-medium" font-weight="500" font-size="80" transform="translate(-210.1 -17.1)" style="font-weight:400;font-size:80px;font-family:'Prompt ExtraLight';fill:#f90">
+              <tspan id="whole" x="1305.268" y="116.027">whole™</tspan>
+            </text>
+          </g>
+
+          <!--Path to the inner circle-->
+
+          <path id="follow-heart" d="M804.228 640.45c.942-137.706 6.05-377.543 127.678-483.728" style="fill:none;fill-rule:evenodd;stroke:#c0c;stroke-width:16;marker-end:url(#DiamondS)"/>
+
+          <!--announcing innercircles community-->
+          <text id="announcing" class="txt-light" x="499.881" y="976.566" font-weight="400" font-size="41" style="font-weight:400;font-size:41px;font-family:'Prompt ExtraLight';fill:#c0c">
+            <tspan id="coming-soon" y="1106.566" x="669.881">COMING 2018</tspan>
+          </text>
+          <g id="innercircles-community" transform="translate(4)">
+
+            <!--logo-->
+            <g id="symbolic-circles" transform="matrix(.7 0 0 .7 96.4 689.1)" style="fill:none;stroke-width:8">
+              <circle r="50" cy="711.258" cx="237.693" id="thinks-2" style="stroke:#069"/>
+              <circle r="32" cy="711.258" cx="237.693" id="acts-2" style="stroke:#060"/>
+              <circle r="14" cy="711.258" cx="237.693" id="feels-2" style="stroke:#f90"/>
+            </g>
+
+            <!--open up innercircles-->
+            <text id="open-up" class="txt-medium" x="318.077" y="1212.997" font-weight="500" font-size="100" style="font-weight:500;font-size:90px;font-family:Prompt;fill:#069">
+              <tspan id="innercircles" x="318.077" y="1212.997">innercircles</tspan>
+            </text>
+            <text id="community" class="txt-medium" x="833.523" y="1212.997" font-weight="400" font-size="100" style="font-weight:400;font-size:90px;font-family:'Prompt ExtraLight';fill:#f90">
+              <tspan id="service" x="833.523" y="1212.997">community</tspan>
+            </text>
+            <g id="mark-service" style="fill:#f90">
+              <path id="path4181" d="M1304.132 1182.626q-1.616 0-3.502-.43-1.83-.485-2.855-1.186v-2.586q1.347.754 2.963 1.24 1.67.43 3.233.43 1.887 0 2.75-.43.86-.486.86-1.455 0-1.24-.86-1.834-.863-.593-3.503-1.347-2.91-.755-4.202-1.887-1.293-1.13-1.293-3.232 0-2.21 1.725-3.34 1.724-1.185 4.74-1.185 1.456 0 2.91.323 1.51.27 2.425.808v2.532q-2.1-1.132-5.064-1.132-1.886 0-2.856.43-.916.432-.916 1.564 0 1.13.808 1.616.862.485 3.664 1.347 3.017.97 4.202 2.1 1.185 1.132 1.185 3.18 0 2.047-1.67 3.286-1.616 1.185-4.74 1.185zm8.028-16.647h3.125l6.088 11.797 6.034-11.8h3.124v16.27h-3.122v-10.612l-5.226 10.613h-1.616l-5.28-10.614v10.613h-3.124v-16.27z"/>
+            </g>
+      
+            <!--first help!-->
+            <text id="community-help" class="txt-light" x="357.187" y="1263.551" font-weight="400" font-size="41" style="font-weight:400;font-size:41px;font-family:'Prompt ExtraLight';fill:#069">
+              first human evolutionary lifestyle platform
+            </text>
+
+            <g id="flourish" style="font-weight:400;font-size:41px;font-family:'Prompt ExtraLight';fill:#069">
+              <path d="M1209.097 1247q0 1.54-1.502 2.943-1.32 1.2-2.963 1.7-.54.02-1.58.222-.14.1-.482.24-.32.12-1.6.12-.702 0-2.704-.6-.4-.02-1.18-.14-1.122-.3-2.564-.3-1.52 0-1.94.12-2.744.78-8.23 5.805-1.64 1.34-4.644 4.304-.5.84-1.52 2.502h.06q.24 0 .92-.38.86-.48.94-.5.38-.16 1.462-.16.26 0 .74-.16.48-.18.74-.18.302 0 .862.12.58.12.88.12.24 0 .54-.02.242-.16.682-.52.28-.422.92-1.242 1.222-1.362 2.764-1.782.64-.18 3.263-.42.52-.1 1.582-.26 1.682-.14 5.065-.64.24-.022.72-.122.28-.08 1.583-.76 1.24-.66 1.36-.66.522 0 .522.56 0 .32-1.142 3.223-.08.22-1.38 2.222-.862 1.34-1.863 1.982-.3.12-.88.36-2.623 1.18-4.905 1.18-2.523 0-3.764-.28-1-.22-1.982-.78-.58-.42-1.18-.82-.602-.42-1.403-.42-.18 0-.54.04-.36.02-.54.02-.28 0-.84-.02-.562-.02-.842-.02-1.02 0-3.663 1.1-1.16.48-1.762 2.122-.26.72-.64 2.822-.02.56-.22 1.5-.22.502-.76.502-.402 0-.662-.66-.2-.06-.6-.3.04-2.764 1.44-6.067.482-1.1 1.823-2.783l1.52-1.64q1.002-1.142 1.002-1.863 0-.8-1.02-1.56-.46-.2-1.342-.68-.86-.562-1.742-1.643-.96-1.18-1.12-2.082-.1-.54-.1-1.52 0-2.784.86-5.006.06-.402.2-1.182.22-.64.64-1.922l.32-.34h.662q.08 1 .36 2.562.74 1.02 1.922 2.763 1.08 1.822 1.4 2.703.402 1.2.402 3.023 0 1.24-.22 1.702-.06.12-.52.72-.46.58-.46.68 0 .1.38.842.42.84.46.94.84-.72 1.62-1.28.38-.26.5-.58.242-.56.302-.662.28-.28.76-.86.08-.34.28-1.02.26-.382.66-1.203.422-1.32.422-2.882l-1.16-.3q-.702-.26-.962-.66-.5-.782-.5-1.643 0-1.16.44-3.263.46-2.222.94-3.143.34-.64 1.502-2.302h.44q-.02 1.12-.02.94 0 .88.2 1.442.06.18.58 1.08.562.962 1.443 2.964.12.4.12 1.842 0 1.962-1.282 2.943-.22.06-.62.4-.14.78-.36 1.902-.3 1.32-.86 2.402v.08q2.48-2.162 3.842-3.143 1.422-.78 3.924-2.702.502-.52.502-1.522 0-.22-.8-.98-.782-.782-.782-1.062v-3.383q0-.06 1.2-3.604.322-.34.582-.34.16 0 .52.662.62 1.08 1.262 2.162.4.86.4 2.502 0 1.12-.76 3.143-.1.26-.68 1.02l.06.52 3.042-2.842q-.28-.58-.56-1.14-.16-.402-.16-1.503 0-.94.58-2.082.6-1.14 1.34-1.76.962-.562 2.663-1.863.02-.02.32-.6.18-.34.56-.34.4 0 .4.58 0 1.4-.1 2.14-.02.162-.16.542-.14.36-.14.56 0 .22.02.66v.642q0 1.46-.9 2.442-.5.52-2.143 1.562-.04.02-.68.76-2.383 2.723-5.806 4.725.08.04.26.04.322 0 .962-.12.64-.12.96-.12.882 0 1.803.24 1-2.082 3.203-2.863 1.542-.54 4.344-.54.38 0 1.14.04.782.04 1.163.04.3 0 .86-.2.58-.2.88-.2.442 0 .442.4zm-7.848-8.068h-.3q-.14.38-1.142 1.682-.86 1.1-.86 1.76v.642h.3q.2-.2.32-.64.14-.58.2-.7.02-.04 1.48-2.744zm3.242 10.35v-.28q-1.14-.34-1.44-.34h-.382q-2.222.04-4.184 1.54-.14.12-.16.26l.18.18h.48q.04 0 1.262-.68 1.24-.68 1.762-.68h2.482zm-9.97-5.425v-.62q0-.28-.66-2.023h-.3v.74q0 .14.12.4.12.262.12.402v2.943q.16.16.3.18.42-1.022.42-2.023zm-7.627 3.623q0-1.14-.96-3.883h-.3v.26q0 .12.2.34.02.26.14.84.14.582.14.902v3.342q.06 0 .2.02.16.02.24.02.1 0 .18-.04.16-1.02.16-1.802zm6.987 14.294l-.16-.16q-2.763-.34-2.663-.34-1.262 0-2.623.34-.98.24-1.382 1.28.12.122.36.122.2 0 .78-.34.702-.4.802-.44.84-.342 2.022-.342.3 0 .86.08.58.08.88.08.862 0 1.122-.28zm-14.835-8.468q0-.72-.58-2.422-.58-1.702-1.04-2.142-.12.16-.26.18.44 1.7 1.5 5.045h.3q.08-.26.08-.66z" style="font-weight:400;font-size:41px;font-family:'Prompt ExtraLight';fill:#069" id="path4360"/>
+            </g>
+          </g>
+      
+          <!--Help pave the first path !?-->
+          <g id="helping-angels" font-weight="400" font-size="44" style="font-weight:400;font-size:44px;font-family:'Prompt ExtraLight'">
+            <text id="give-heart" y="546.598" x="1056.528" class="txt-light" style="font-weight:400;font-family:'Prompt ExtraLight';fill:#069" transform="translate(-12 -6)">
+              <tspan id="give" x="1226.528" y="676.598">GIVE</tspan>
+            </text>
+            <g style="font-weight:400;font-size:44px;font-family:'Prompt ExtraLight';fill:#c0c" id="heartbeat">
+              <path d="M1339.762 667.663q-2.943-5.135-11.902-10.334-4.168-2.43-4.168-6.253 0-1.61.58-3.094.602-1.482 1.783-2.642 1.14-1.117 2.622-1.76 1.396-.603 3.05-.603 1.655 0 3.05.602 1.462.622 2.622 1.76 1.138 1.118 1.74 2.6.622 1.46.622 3.137 0-1.676.602-3.137.623-1.482 1.762-2.6 1.16-1.138 2.62-1.76 1.397-.603 3.052-.603 1.654 0 3.05.602 1.483.643 2.62 1.76 1.183 1.16 1.763 2.643.603 1.483.603 3.094 0 3.867-4.168 6.252-8.96 5.198-11.903 10.333z" id="sustain-life"/>
+            </g>
+            <text id="help-heart" y="546.598" x="1211.797" class="txt-light" style="font-weight:400;font-family:'Prompt ExtraLight';fill:#c0c" transform="translate(-12 -6)">
+              <tspan id="donate" x="1381.797" y="676.598">HELP</tspan>
+            </text>
+          </g>
+        </g>
+        <!--THANK YOU SO MUCH !-->
+      </svg>
+    </div>
+
+    <script>
+      var getSomeAction = [ thinkReveal, actReveal, feelReveal, playReveal, enlightenReveal ];
+      var chime = document.querySelector('#bell-chime');
+      var gong = document.querySelector('#gong-chime');
+      var sparkle = document.querySelector('#magic-sparkle');
+      var stepUp = 0;
+
+      function revealMore() {
+        getSomeAction[stepUp++]();
+        stepUp = (stepUp == 5 ? 0 : stepUp);
+      }
+
+      function revealAction() {
+        anime({
+          targets: '#lets-think',
+          opacity: 1,
+          fill: '#069',
+          translateX: -400,
+          duration: 600
+        });
+        anime({
+          targets: '#lets-act',
+          opacity: 1,
+          fill: '#060',
+          translateX: -400,
+          duration: 600,
+          delay: 100
+        });
+        anime({
+          targets: '#lets-feel',
+          opacity: 1,
+          fill: '#f90',
+          translateX: -400,
+          duration: 600,
+          delay: 200
+        });
+        anime({
+          targets: '#lets-play',
+          opacity: 1,
+          fill: '#c0c',
+          translateX: -400,
+          duration: 600,
+          delay: 300
+        });
+        anime({
+          targets: '#lets-flourish',
+          opacity: 1,
+          fill: '#f90',
+          translateX: -400,
+          duration: 600,
+          delay: 400
+        });
+        anime({
+          targets: '#emblem-reward-circle',
+          stroke: '#069',
+          duration: 1500,
+          easing: 'linear'
+        });
+      }
+
+      function thinkReveal() {
+        chime.play();
+        anime({
+          targets: '#lets-think',
+          opacity: 0,
+          translateX: '-=0px',
+          translateY: '-=30px',
+          fill: '#999',
+          duration: 1500
+        });
+        anime({
+          targets: '#atmo-sphere',
+          opacity: 1,
+          duration: 1000
+        });
+        anime({
+          targets: '#think-connect, #air-connect, #mind-connect, #think-circles',
+          strokeDashoffset: [anime.setDashoffset, 0],
+          easing: 'easeInOutSine',
+          duration: 1500
+        });
+        anime({
+          targets: '#innercircles-connect',
+          strokeDashoffset: [anime.setDashoffset, 0],
+          easing: 'easeInOutSine',
+          duration: 1500
+        });
+        anime({
+          targets: '#emblem-reward-circle',
+          stroke: '#060',
+          duration: 1500,
+          easing: 'linear'
+        });
+        anime({
+          targets: '#come-together',
+          duration: 1000,
+          delay: 800,
+          opacity: 1,
+          easing: 'linear'
+        });
+      }
+
+      function actReveal() {
+        chime.play();
+        anime({
+          targets: '#lets-act',
+          opacity: 0,
+          translateX: '-=0px',
+          translateY: '-=30px',
+          fill: '#999',
+          duration: 1500
+        });
+        anime({
+          targets: '#eco-sphere',
+          opacity: 1,
+          duration: 1000
+        });
+        anime({
+          targets: '#act-connect, #earth-connect, #body-connect, #act-circles',
+          strokeDashoffset: [anime.setDashoffset, 0],
+          easing: 'easeInOutSine',
+          duration: 1500
+        });
+        anime({
+          targets: '#fullcircle-connect',
+          strokeDashoffset: [anime.setDashoffset, 0],
+          easing: 'easeInOutSine',
+          duration: 1500
+        });
+        anime({
+          targets: '#emblem-reward-circle',
+          stroke: '#f90',
+          duration: 1500,
+          easing: 'linear'
+        });
+        anime({
+          targets: '#come-fullcircle',
+          duration: 1000,
+          delay: 800,
+          opacity: 1,
+          easing: 'linear'
+        });
+      }
+
+      function feelReveal() {
+        chime.play();
+        anime({
+          targets: '#lets-feel',
+          opacity: 0,
+          translateX: '-=0px',
+          translateY: '-=30px',
+          fill: '#999',
+          duration: 1500
+        });
+        anime({
+          targets: '#centri-sphere',
+          opacity: 1,
+          duration: 1000
+        });
+        anime({
+          targets: '#feel-connect, #ether-connect, #soul-connect, #feel-circles',
+          strokeDashoffset: [anime.setDashoffset, 0],
+          easing: 'easeInOutSine',
+          duration: 1500
+        });
+        anime({
+          targets: '#emblem-reward-circle',
+          stroke: '#c0c',
+          duration: 1500,
+          easing: 'linear'
+        });
+      }
+
+      function playReveal() {
+        chime.play();
+        anime({
+          targets: '#lets-play',
+          opacity: 0,
+          translateX: '-=0px',
+          translateY: '-=30px',
+          fill: '#999',
+          duration: 1500
+        });
+        anime({
+          targets: '#pleasure-sphere',
+          opacity: 1,
+          duration: 1000
+        });
+        anime({
+          targets: '#play-connect',
+          strokeDashoffset: [anime.setDashoffset, 0],
+          easing: 'easeInOutSine',
+          duration: 1500
+        });
+        anime({
+          targets: '#innercircles-center',
+          duration: 1000,
+          delay: 1500,
+          opacity: 1
+        });
+        anime({
+          targets: '#emblem-reward-circle',
+          stroke: '#f90',
+          duration: 1500,
+          easing: 'linear'
+        });
+        anime({
+          targets: '#grow-heart',
+          duration: 1000,
+          delay: 800,
+          opacity: 1,
+          easing: 'linear'
+        });
+      }
+
+      function enlightenReveal() {
+        gong.volume = 0.6;
+        gong.play();
+        sparkle.play();
+        anime({
+          targets: '#lets-flourish',
+          opacity: 0,
+          translateX: '-=0px',
+          translateY: '-=30px',
+          fill: '#999',
+          duration: 1500
+        });
+        anime({
+          targets: '#follow-heart, #emblem-left, #emblem-right',
+          strokeDashoffset: [anime.setDashoffset, 0],
+          opacity: 1,
+          easing: 'easeInOutSine',
+          duration: 1500
+        });
+        anime({
+          targets: '#DiamondS',
+          opacity: 1,
+          duration: 1000,
+          delay: 1500
+        });
+        anime({
+          targets: '#reward-heart',
+          strokeDashoffset: [anime.setDashoffset, 0],
+          opacity: 1,
+          easing: 'easeInOutSine',
+          duration: 1000,
+          delay: 1500
+        });
+        anime({
+          targets: '#announcing',
+          opacity: 1,
+          duration: 1000,
+          delay: 1500
+        });
+        anime({
+          targets: '#innercircles-community',
+          opacity: 1,
+          duration: 5000,
+          delay: 1700
+        });
+        anime({
+          targets: '#first-help',
+          opacity: 1,
+          duration: 4400,
+          delay: 2300
+        });
+        anime({
+          targets: '#helping-angels',
+          opacity: 1,
+          duration: 1000,
+          delay: 2300
+        });
+      }
+
+      window.onload = revealAction();
+    </script>
+  </body>
+</html>
